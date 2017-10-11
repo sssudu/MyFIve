@@ -1,5 +1,5 @@
 <template>
-  <a
+  <a 
     v-bind:href="href"
     v-bind:class="{ active: isActive }"
     v-on:click="go"
@@ -39,6 +39,23 @@
 
 <style scoped>
   .active {
-    color: cornflowerblue;
+        width: 130px;
+    background: url(/src/imgs/lux_index.png) -8px -215px no-repeat;
+    font-size: 14px;
+    font-weight: bold;
+    height: 38px;
+    color: #fff;
+    display: inline-block;
+    z-index: 999;
+  }
+  a{
+    display: block;
+    /* padding: 0px 40px; */
+    width: 82px;
+    height: 38px;
+    color: #c8a985;
+  }
+  a:hover{
+    color: white;
   }
 </style>

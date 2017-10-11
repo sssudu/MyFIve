@@ -1,15 +1,27 @@
 <template>
-  <main-layout>
-    <p>About page</p>
-  </main-layout>
+<div>
+    <!-- <v-head></v-head> -->
+    <main-layout>
+      
+      <p>about</p>
+    </main-layout>
+    <!-- <v-footer></v-footer> -->
+  </div>
+  
 </template>
 
 <script>
   import MainLayout from '../layouts/Main.vue'
-
   export default {
     components: {
       MainLayout
     }
   }
 </script>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  }
+</style>
+

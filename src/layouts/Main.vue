@@ -1,31 +1,30 @@
 <template>
-  <div class="container">
-    <ul>
-      <li>
-        <v-link href="/">Home</v-link>
-        <v-link href="/about">About</v-link>
-      </li>
-    </ul>
-
+  <div>
+    <v-head></v-head>
+    <v-nav></v-nav>
     <slot></slot>
+    <v-footer></v-footer>
+    <!-- <v-ad></v-ad> -->
   </div>
 </template>
 
 <script>
-  import VLink from '../components/VLink.vue'
 
-  export default {
-    components: {
-      VLink
-    }
+
+import VHead from '../components/header.vue'
+import VFooter from '../components/Footer.vue'
+import VNav from '../components/nav_list.vue'
+
+
+
+export default {
+  components:{
+    VHead,VFooter,VNav
   }
+}
+
 </script>
 
 <style scoped>
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 15px 30px;
-    background: #f9f7f5;
-  }
+
 </style>
