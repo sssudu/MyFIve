@@ -11,7 +11,8 @@ export default {
     data(){
         return {
             imgSrc:'/src/imgs/foot_popup.png',
-            isPopShow:true
+            isPopShow:true,
+            ss:'a'
             }
     }
 }
