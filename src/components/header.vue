@@ -3,6 +3,7 @@
         <div class="head">
             <div class="go_homepage">
                 <b></b>
+                
                 <a href="">第五大道首页</a>
                 <i></i>
             </div>
@@ -28,7 +29,7 @@
                 </div>
                 <div class="my5lux" @mouseover="lux5Show=true" @mouseout="lux5Show=false">
                     <div>
-                        <span>我的第五大道</span>
+                        <a style="float: left; padding-left: 15px;">我的第五大道</a>
                         <i></i>
                     </div>
                     <ul v-show="lux5Show">
@@ -52,12 +53,12 @@
                 </div>
                 <div class="logbox">
                     <div class="login">
-                        <a href="">登陆</a>
+                        <v-link class="text" href="/login">登陆</v-link>
                         <i></i>
                     </div>
                     <div class="regist">
                         <span></span>
-                        <a href="">注册</a>
+                        <v-link class="text" href="/regist">注册</v-link>
                         <i></i>
                     </div>
 
@@ -69,8 +70,8 @@
         <div class="head_mid">
             <div class="mid_content">
                 <div class="mid_logo">
-                    <a href="">
-                        <img :src="imgSrc[1]" alt="" title="第五大道奢侈品网">
+                    <v-link class="text" href="/"><img :src="imgSrc[1]" alt="" title="第五大道奢侈品网"></v-link>
+                        
                     </a>
                 </div>
                 <div class="mid_ad">
@@ -134,7 +135,7 @@
     </header>
 </template>
 <script>
-
+import VLink from '../components/VLink.vue'
 export default {
 
     data() {
@@ -144,6 +145,9 @@ export default {
             mobilShow: false,
             shopingShow: false
         }
+    },
+    components:{
+        VLink
     }
 }
 </script>
@@ -177,21 +181,22 @@ ul {
 a:hover {
     color: rgb(178, 130, 71);
 }
-
+header{
+        background: #f2f2f2;
+}
 .head {
     font: 12px/200% "microsoft yahei", 微软雅黑, Helvetica, Arial, Tahoma, 黑体, 宋体, sans-serif;
     height: 30px;
-    background: rgb(242, 242, 242);
     position: relative;
     width: 1210px;
     margin: 0px auto;
+    background: #f2f2f2;
 }
 
 .head div {
     height: 30px;
     position: relative;
     color: rgb(102, 102, 102);
-    text-align: center;
 }
 
 .head .go_homepage {
@@ -374,7 +379,20 @@ a:hover {
     text-align: right;
     padding-right: 20px;
 }
-
+.head_right .login .text{
+    color: inherit;
+    text-decoration: none;
+}
+.head .text{
+    color: inherit;
+    text-decoration: none;
+}
+.head .text:hover{
+    color: #b28247;
+}
+.head_right .login .text:hover{
+    color: #d00000;
+}
 .head .logbox {
     position: absolute;
     right: 350px;

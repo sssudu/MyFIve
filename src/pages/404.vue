@@ -13,3 +13,7 @@
     }
   }
 </script>
+<style>
+@import   '/static/common/common.css';
+</style>
+

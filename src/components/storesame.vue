@@ -10,7 +10,7 @@
             <ul class="storesame_box" :style="{left:left+'px'}">
                 <li class="store_li" v-for="(item,index) in samestore.storeSameList.storeSameContent">
                     <div class="storesameb_left">
-                        <a href=""><img class="storesamePic" :src="item.leftPic" alt=""></a>
+                        <shop-link href="/detail"><img class="storesamePic" :src="item.leftPic" alt=""></shop-link>
                     </div>
                     <div class="storesameb_right">
                         <div class="storesameb_top">
@@ -68,6 +68,7 @@
     </div>
 </template>
 <script>
+import ShopLink from '../components/ShopLink.vue'
 export default {
     props: ['samestore'],
     data() {
@@ -75,6 +76,9 @@ export default {
         activeIndex:0,
         left:0 }
 
+    },
+    components:{
+        ShopLink
     },
     methods: {
         changeActive: function(index, title) {

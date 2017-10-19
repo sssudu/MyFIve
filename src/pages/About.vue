@@ -19,6 +19,7 @@
   }
 </script>
 <style>
+@import   '/static/common/common.css';
 *{
   margin: 0;
   padding: 0;

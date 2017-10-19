@@ -26,6 +26,10 @@
 </script>
 <style>
   @import   '/static/common/common.css';
+  *{
+  margin: 0;
+  padding: 0;
+  }
 body{
   font: 12px/200% 'microsoft yahei','微软雅黑',Helvetica,Arial,Tahoma,"黑体",'宋体',sans-serif;
 }

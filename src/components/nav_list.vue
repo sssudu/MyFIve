@@ -149,6 +149,7 @@ export default {
 }
 
 .icon_wrap {
+  margin: 0;
   position: absolute;
   right: 15px;
   top: 0;

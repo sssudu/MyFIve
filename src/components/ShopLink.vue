@@ -10,7 +10,15 @@
 
 <script>
   import routes from '../routes'
-  
+  import Vue from 'vue'
+  import VueRouter from 'vue-router'
+  import Detail from '../pages/Detail.vue'
+  // const router = new VueRouter({
+  //           routes: [
+  //             // 动态路径参数 以冒号开头
+  //             { path: '/detail/:id', component: Detail, }
+  //           ]
+  //         })
   export default {
     props: {
       href: {
@@ -38,24 +46,4 @@
 </script>
 
 <style scoped>
-  .active {
-        width: 130px;
-    background: url(/src/imgs/lux_index.png) -8px -215px no-repeat;
-    font-size: 14px;
-    font-weight: bold;
-    height: 38px;
-    color: #fff;
-    display: inline-block;
-    z-index: 999;
-  }
-  a{
-    display: block;
-    /* padding: 0px 40px; */
-    width: 82px;
-    height: 38px;
-    color: #c8a985;
-  }
-  a:hover{
-    color: white;
-  }
 </style>
